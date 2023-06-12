@@ -72,5 +72,30 @@ export class AppComponent {
     };
     const { name:nombre} = per3;
     console.log('El nombre es =', nombre);
+
+  // Ejercicios
+  //1.- Convertir a array y sumar los numeros pares
+  //{1:'a',2:'b',3:'a',4:'a',5:'a',6:'a'}
+  const a = {1:'a',2:'b',3:'a',4:'a',5:'a',6:'a'};
+  const b = Object.keys(a).map(n => parseInt(n)).reduce((acc, value) =>{
+    if (value % 2 === 0 ){
+      acc = acc + value;
+    }
+    return acc;
+  }, 0);
+   console.log('El valor devuelto es :',b);
+         // Tratar de realizar ejercicio 1 igualmente con Filter
+
+//2.- Filtrar los numeros impares y mostrarlos como cadena
+//[1,2,3,4,5,6]
+console.log('Resultado numeros impares en cadena :', [1,2,3,4,5,6].filter(s => s%2 !== 0).join('-'))
+
+
   } // Fin constructor
+
+
+
+
+
+
 }
